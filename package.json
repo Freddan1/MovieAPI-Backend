@@ -4,9 +4,11 @@
   "description": "",
   "main": "service.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --group=-component --group=-integration",
     "start": "node service.js",
-    "dev": "nodemon service.js"
+    "dev": "nodemon service.js",
+    "component_test": "jest --group=component",
+    "integration_test": "jest --group=integration"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,11 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "nodemon": "^3.0.1"
+    "jest-runner-groups": "^2.2.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "runner": "groups"
   }
 }
