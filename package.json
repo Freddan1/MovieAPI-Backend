@@ -4,7 +4,7 @@
   "description": "",
   "main": "service.js",
   "scripts": {
-    "test": "jest --group=-component --group=-integration",
+    "test": "jest  --group=-component --group=-integration",
     "start": "node service.js",
     "dev": "nodemon service.js",
     "component_test": "jest --group=component",
